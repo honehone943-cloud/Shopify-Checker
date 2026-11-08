@@ -1,0 +1,14 @@
+cd /storage/emulated/0/netlify-shopify-checker
+cat > netlify.toml << 'EOF'
+[build]
+  functions = "netlify/functions"
+
+[build.environment]
+  PYTHON_VERSION = "3.11"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/shopify/:splat"
+  status = 200
+  force = true
+EOF
