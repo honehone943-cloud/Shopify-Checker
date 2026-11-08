@@ -1,5 +1,3 @@
-cd /storage/emulated/0/netlify-shopify-checker
-cat > netlify.toml << 'EOF'
 [build]
   functions = "netlify/functions"
 
@@ -11,4 +9,3 @@ cat > netlify.toml << 'EOF'
   to = "/.netlify/functions/shopify/:splat"
   status = 200
   force = true
-EOF
